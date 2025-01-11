@@ -7,6 +7,8 @@ import com.example.mylibrary.repository.InteractionRepository
 import com.example.mylibrary.repository.PostRepository
 import kotlinx.coroutines.flow.combine
 import java.util.concurrent.Flow
+import javax.inject.Inject
+
 
 class GetPostsWithUsersWithInteractionUseCase @Inject constructor(
     configuration: UseCase.Configuration,

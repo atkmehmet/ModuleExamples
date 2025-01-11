@@ -4,6 +4,7 @@ import com.example.mylibrary.entity.Post
 import com.example.mylibrary.repository.PostRepository
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
+import javax.inject.Inject
 
 class GetPostUseCase @Inject constructor(
     configuration: UseCase.Configuration,
