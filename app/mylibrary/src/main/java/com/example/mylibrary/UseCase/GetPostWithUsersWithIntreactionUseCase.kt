@@ -1,6 +1,5 @@
 package com.example.mylibrary.UseCase
 
-import com.example.mylibrary.UserRepository
 import com.example.mylibrary.entity.Interaction
 import com.example.mylibrary.entity.PostWithUser
 import com.example.mylibrary.repository.InteractionRepository
