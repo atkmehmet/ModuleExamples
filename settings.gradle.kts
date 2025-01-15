@@ -22,3 +22,4 @@ dependencyResolutionManagement {
 rootProject.name = "ModuleExamples"
 include(":app")
 include(":app:mylibrary")
+include(":app:data-repository")
