@@ -23,3 +23,4 @@ rootProject.name = "ModuleExamples"
 include(":app")
 include(":app:mylibrary")
 include(":app:data-repository")
+include(":app:data-remote")

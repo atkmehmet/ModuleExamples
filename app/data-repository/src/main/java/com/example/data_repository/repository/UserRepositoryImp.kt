@@ -1,4 +1,4 @@
-package com.example.data_repository.data_source.repository
+package com.example.data_repository.repository
 
 import com.example.data_repository.data_source.local.LocalUserDataSource
 import com.example.data_repository.data_source.remote.RemoteUserDataSource
