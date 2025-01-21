@@ -14,6 +14,7 @@
             <option value="$PROJECT_DIR$/app/data-remote" />
             <option value="$PROJECT_DIR$/app/data-repository" />
             <option value="$PROJECT_DIR$/app/mylibrary" />
+            <option value="$PROJECT_DIR$/app/representation-posts" />
           </set>
         </option>
         <option name="resolveExternalAnnotations" value="false" />
