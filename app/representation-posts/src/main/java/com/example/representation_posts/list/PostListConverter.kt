@@ -19,7 +19,7 @@ class PostListConverter @Inject constructor(
             is Result.Succes->{
                 UiState.Success(PostListModel(
                     headerText = context.getString(
-
+                        R.string.
                     )
                 ))
             }
