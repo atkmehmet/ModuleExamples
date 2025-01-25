@@ -8,6 +8,7 @@ import javax.inject.Inject
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -16,7 +17,7 @@ import kotlinx.coroutines.withContext
 class PostListViewModel @Inject constructor(
     private val useCase: GetPostsWithUsersWithInteractionUseCase,
     private val converter: PostListConverter
-) {
+):ViewModel() {
 
     private val _postListFlow =
         MutableStateFlow<UiState<PostListModel>>(UiState.Loading)
@@ -26,6 +27,9 @@ class PostListViewModel @Inject constructor(
         _postListFlow
 
     fun loadPosts(){
-       viewModelScope.launch
+          viewModelScope.launch {
+              useCase.execute
+              (GetPostsWithUsersWithInteractionUseCase.Request)
+          }
     }
 }
