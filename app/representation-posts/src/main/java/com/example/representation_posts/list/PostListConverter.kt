@@ -18,9 +18,15 @@ class PostListConverter @Inject constructor(
             }
             is Result.Succes->{
                 UiState.Success(PostListModel(
-                    headerText = context.getString(
-                        R.string.= 12
-                    )
+                    headerText = "MehmetDurmaz",
+                    items = postListResult.data.posts.map {
+                        PostListItemModel(
+                            it.post.id,
+                            it.user.id,
+                            "MehmetDurmaz",
+                            "title"
+                        )
+                    }
                 ))
             }
         }
