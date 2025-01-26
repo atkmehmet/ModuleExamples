@@ -30,6 +30,12 @@ class PostListViewModel @Inject constructor(
           viewModelScope.launch {
               useCase.execute
               (GetPostsWithUsersWithInteractionUseCase.Request)
+                  .map {
+                      converter.convert(it)
+                  }
+                  .collect{
+                      _postListFlow.value = it
+                  }
           }
     }
 }
