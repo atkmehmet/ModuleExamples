@@ -84,6 +84,10 @@ dependencies {
     kapt("com.google.dagger:hilt-compiler:2.51.1")
     implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
 
+    implementation(project(":app:data-repository"))
+    implementation(project(":app:mylibrary"))
+    implementation(project(":app:representation-posts"))
+
 
 
 
