@@ -8,7 +8,9 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import com.google.android.material.progressindicator.CircularProgressIndicator
+import androidx.compose.material3.CircularProgressIndicator
+
+
 
 @Composable
 fun Error(errorMessage: String){

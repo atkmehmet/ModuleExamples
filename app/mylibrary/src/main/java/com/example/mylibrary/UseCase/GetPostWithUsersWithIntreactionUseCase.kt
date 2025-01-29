@@ -4,6 +4,7 @@ import com.example.mylibrary.entity.Interaction
 import com.example.mylibrary.entity.PostWithUser
 import com.example.mylibrary.repository.InteractionRepository
 import com.example.mylibrary.repository.PostRepository
+import com.example.mylibrary.repository.UserRepository
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject

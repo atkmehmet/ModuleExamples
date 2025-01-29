@@ -5,13 +5,11 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import javax.inject.Inject
-
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
+
 
 @HiltViewModel
 class PostListViewModel @Inject constructor(
@@ -28,9 +26,7 @@ class PostListViewModel @Inject constructor(
 
     fun loadPosts(){
           viewModelScope.launch {
-              useCase.execute
-              (GetPostsWithUsersWithInteractionUseCase.Request)
-                  .map {
+              useCase.execute(GetPostsWithUsersWithInteractionUseCase.Request).map {
                       converter.convert(it)
                   }
                   .collect{
