@@ -15,8 +15,6 @@ import java.util.prefs.Preferences
 import javax.sql.DataSource
 
 
-val Context.datastore:DataSource<Preferences> by
-preferencesDataStore(name = "my_preferences")
 @Module
 @InstallIn(SingletonComponent::class)
 class PersistenceModule {
@@ -37,8 +35,4 @@ class PersistenceModule {
     fun providePostDao(appDatabase: AppDatabase):PostDao
     = appDatabase.postDao()
 
-    @Provides
-    fun provideLocalInteractionDataSourceImpl
-                (@ApplicationContext context: Context) =
-        LocalInteractionDataSourceImpl(context.datastore)
 }

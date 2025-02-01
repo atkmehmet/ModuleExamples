@@ -12,8 +12,8 @@ sealed class UseCaseException (cause: Throwable):Throwable(cause) {
 
         fun createFromThrowable(throwable: Throwable):UseCaseException
         {
-            //return if (throwable is UseCaseException)
-              //  throwable else UnknownException(throwable)
+            return if (throwable is UseCaseException)
+                throwable else UnknownException(throwable)
         }
     }
 }
